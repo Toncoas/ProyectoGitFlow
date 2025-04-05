@@ -72,6 +72,7 @@
             this.GuardarVehiculo.TabIndex = 2;
             this.GuardarVehiculo.Text = "Save";
             this.GuardarVehiculo.UseVisualStyleBackColor = true;
+            this.GuardarVehiculo.Click += new System.EventHandler(this.GuardarVehiculo_Click);
             // 
             // Marca
             // 
@@ -170,7 +171,7 @@
             this.EditarVehiculo.Name = "EditarVehiculo";
             this.EditarVehiculo.Size = new System.Drawing.Size(75, 23);
             this.EditarVehiculo.TabIndex = 13;
-            this.EditarVehiculo.Text = "button2";
+            this.EditarVehiculo.Text = "Edit";
             this.EditarVehiculo.UseVisualStyleBackColor = true;
             // 
             // BuscarVehiculo
@@ -179,7 +180,7 @@
             this.BuscarVehiculo.Name = "BuscarVehiculo";
             this.BuscarVehiculo.Size = new System.Drawing.Size(75, 23);
             this.BuscarVehiculo.TabIndex = 14;
-            this.BuscarVehiculo.Text = "button3";
+            this.BuscarVehiculo.Text = "Search";
             this.BuscarVehiculo.UseVisualStyleBackColor = true;
             // 
             // EliminarVehiculo
@@ -188,7 +189,7 @@
             this.EliminarVehiculo.Name = "EliminarVehiculo";
             this.EliminarVehiculo.Size = new System.Drawing.Size(75, 23);
             this.EliminarVehiculo.TabIndex = 15;
-            this.EliminarVehiculo.Text = "button4";
+            this.EliminarVehiculo.Text = "Delete";
             this.EliminarVehiculo.UseVisualStyleBackColor = true;
             // 
             // Form1
