@@ -182,6 +182,7 @@
             this.BuscarVehiculo.TabIndex = 14;
             this.BuscarVehiculo.Text = "Search";
             this.BuscarVehiculo.UseVisualStyleBackColor = true;
+            this.BuscarVehiculo.Click += new System.EventHandler(this.BuscarVehiculo_Click_1);
             // 
             // EliminarVehiculo
             // 
