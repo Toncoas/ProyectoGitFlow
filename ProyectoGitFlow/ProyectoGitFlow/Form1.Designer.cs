@@ -193,6 +193,7 @@
             this.EliminarVehiculo.TabIndex = 15;
             this.EliminarVehiculo.Text = "Delete";
             this.EliminarVehiculo.UseVisualStyleBackColor = true;
+            this.EliminarVehiculo.Click += new System.EventHandler(this.EliminarVehiculo_Click);
             // 
             // Form1
             // 

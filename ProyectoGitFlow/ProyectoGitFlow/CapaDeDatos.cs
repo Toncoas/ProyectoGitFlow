@@ -89,6 +89,21 @@ namespace ProyectoGitFlow
                 }
             }
         }
+        public void EliminarAutobus(int id)
+        {
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                string query = "DELETE FROM Autobuses WHERE Id = @Id";
+                using (SqlCommand comando = new SqlCommand(query, conexion))
+                {
+                    comando.Parameters.AddWithValue("@Id", id);
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+
+                }
+            }
+        }
 
 
     }
