@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,10 @@ namespace ProyectoGitFlow
             capaDeDatos.RegistrarAutobus(autobus);
         }
 
-
+        public DataTable BuscarAutobus(int id)
+        {
+            return capaDeDatos.BuscarAutobus(id);
+        }
 
 
 
