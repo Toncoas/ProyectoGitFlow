@@ -1,0 +1,3 @@
+en la capa de datos, cambia toda la line de la cadena de conexion por esto:
+
+private readonly string cadenaConexion = "Server=.;Database=Autobuses;Trusted_Connection=True;";
