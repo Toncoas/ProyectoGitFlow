@@ -67,5 +67,38 @@ namespace ProyectoGitFlow
             capaDeNegocios.RegistrarAutobus(autobus);
 
         }
+
+
+        private void BuscarVehiculo_Click_1(object sender, EventArgs e)
+        {
+            string idText = txtAutobuses_ID.Text.Trim();
+            // Verificar si el campo txtAutobuses_ID está vacío
+            if (string.IsNullOrWhiteSpace(txtAutobuses_ID.Text))
+            {
+                MessageBox.Show("Por favor, ingrese un ID válido.", "Entrada no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Salir del método si el ID está vacío
+            }
+            // Intentar convertir el texto del ID a un número entero
+            if (!int.TryParse(idText, out int id))
+            {
+                MessageBox.Show("El ID debe ser un número entero válido.", "Entrada no válida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Salir del método si la conversión falla
+            }
+
+            DataTable autobus = capaDeNegocios.BuscarAutobus(id);
+
+            if (autobus.Rows.Count > 0)
+            {
+                txtAutobuses_Marca.Text = autobus.Rows[0]["Marca"].ToString();
+                txtAutobuses_Modelo.Text = autobus.Rows[0]["Modelo"].ToString();
+                txtAutobuses_Placa.Text = autobus.Rows[0]["Placa"].ToString();
+                txtAutobuses_Color.Text = autobus.Rows[0]["Color"].ToString();
+                txtAutobuses_año.Text = autobus.Rows[0]["año"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("No se encontró el autobús.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
