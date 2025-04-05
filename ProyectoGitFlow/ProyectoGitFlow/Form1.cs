@@ -62,6 +62,8 @@ namespace ProyectoGitFlow
                 Color = txtAutobuses_Color.Text,
                 Año = int.Parse(txtAutobuses_año.Text)
             };
+            MessageBox.Show("Se guardo el Vehiculo exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             LimpiarTextBoxes(this);
 
             capaDeNegocios.RegistrarAutobus(autobus);
@@ -99,6 +101,25 @@ namespace ProyectoGitFlow
             {
                 MessageBox.Show("No se encontró el autobús.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void EditarVehiculo_Click(object sender, EventArgs e)
+        {
+            var autobus = new CapaDeEntidades.Autobus
+            {
+                Id = int.Parse(txtAutobuses_ID.Text),
+                Marca = txtAutobuses_Marca.Text,
+                Modelo = txtAutobuses_Modelo.Text,
+                Placa = txtAutobuses_Placa.Text,
+                Color = txtAutobuses_Color.Text,
+                Año = int.Parse(txtAutobuses_año.Text)
+            };
+            MessageBox.Show("Se Edito el Vehiculo exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            LimpiarTextBoxes(this);
+
+            capaDeNegocios.EditarAutobus(autobus);
+
         }
     }
 }
