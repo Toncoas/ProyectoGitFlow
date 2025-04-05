@@ -121,5 +121,14 @@ namespace ProyectoGitFlow
             capaDeNegocios.EditarAutobus(autobus);
 
         }
+
+        private void EliminarVehiculo_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtAutobuses_ID.Text);
+            capaDeNegocios.EliminarAutobus(id);
+            MessageBox.Show("Se Edito el Elimino exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LimpiarTextBoxes(this);
+
+        }
     }
 }
