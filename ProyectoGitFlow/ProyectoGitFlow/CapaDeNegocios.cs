@@ -37,7 +37,10 @@ namespace ProyectoGitFlow
         {
             capaDeDatos.EditarAutobus(autobus);
         }
-    
+        public void EliminarAutobus(int id)
+        {
+            capaDeDatos.EliminarAutobus(id);
+        }
 
 
 
