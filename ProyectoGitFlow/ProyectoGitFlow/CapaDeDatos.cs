@@ -67,6 +67,29 @@ namespace ProyectoGitFlow
 
         }
 
+        public void EditarAutobus(CapaDeEntidades.Autobus autobus)
+        {
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                string query = @"UPDATE Autobuses 
+                                SET Marca = @Marca, Modelo = @Modelo, Placa = @Placa, Color = @Color, año = @año 
+                                WHERE Id = @Id";
+                using (SqlCommand comando = new SqlCommand(query, conexion))
+                {
+                    comando.Parameters.AddWithValue("@Id", autobus.Id);
+                    comando.Parameters.AddWithValue("@Marca", autobus.Marca);
+                    comando.Parameters.AddWithValue("@Modelo", autobus.Modelo);
+                    comando.Parameters.AddWithValue("@Placa", autobus.Placa);
+                    comando.Parameters.AddWithValue("@Color", autobus.Color);
+                    comando.Parameters.AddWithValue("@año", autobus.Año);
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+                }
+            }
+        }
+
 
     }
 }
