@@ -33,7 +33,11 @@ namespace ProyectoGitFlow
             return capaDeDatos.BuscarAutobus(id);
         }
 
-
+        public void EditarAutobus(CapaDeEntidades.Autobus autobus)
+        {
+            capaDeDatos.EditarAutobus(autobus);
+        }
+    
 
 
 

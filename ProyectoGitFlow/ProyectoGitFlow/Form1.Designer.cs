@@ -167,16 +167,17 @@
             // 
             // EditarVehiculo
             // 
-            this.EditarVehiculo.Location = new System.Drawing.Point(106, 324);
+            this.EditarVehiculo.Location = new System.Drawing.Point(184, 324);
             this.EditarVehiculo.Name = "EditarVehiculo";
             this.EditarVehiculo.Size = new System.Drawing.Size(75, 23);
             this.EditarVehiculo.TabIndex = 13;
             this.EditarVehiculo.Text = "Edit";
             this.EditarVehiculo.UseVisualStyleBackColor = true;
+            this.EditarVehiculo.Click += new System.EventHandler(this.EditarVehiculo_Click);
             // 
             // BuscarVehiculo
             // 
-            this.BuscarVehiculo.Location = new System.Drawing.Point(184, 324);
+            this.BuscarVehiculo.Location = new System.Drawing.Point(105, 324);
             this.BuscarVehiculo.Name = "BuscarVehiculo";
             this.BuscarVehiculo.Size = new System.Drawing.Size(75, 23);
             this.BuscarVehiculo.TabIndex = 14;
