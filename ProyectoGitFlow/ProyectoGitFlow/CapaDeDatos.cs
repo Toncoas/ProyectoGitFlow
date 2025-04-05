@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -41,6 +42,31 @@ namespace ProyectoGitFlow
                 }
             }
         }
+        public DataTable BuscarAutobus(int id)
+        {
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                string query = "SELECT * FROM Autobuses WHERE Id = @Id";
+                using (SqlCommand comando = new SqlCommand(query, conexion))
+                {
+                    comando.Parameters.AddWithValue("@Id", id);
+                    conexion.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(comando))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        conexion.Close();
+
+                        return dataTable;
+
+                    }
+
+                }
+
+            }
+
+        }
+
 
     }
 }
